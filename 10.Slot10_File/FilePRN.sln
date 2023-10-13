@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilePRN", "FilePRN\FilePRN.csproj", "{3D101405-8CE5-4206-9B18-005A210E3564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilePRN_Khoa", "FilePRN_Khoa\FilePRN_Khoa.csproj", "{1EBC0562-B3E1-4E65-A52E-37C481FE3971}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D101405-8CE5-4206-9B18-005A210E3564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D101405-8CE5-4206-9B18-005A210E3564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D101405-8CE5-4206-9B18-005A210E3564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D101405-8CE5-4206-9B18-005A210E3564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBC0562-B3E1-4E65-A52E-37C481FE3971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBC0562-B3E1-4E65-A52E-37C481FE3971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBC0562-B3E1-4E65-A52E-37C481FE3971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBC0562-B3E1-4E65-A52E-37C481FE3971}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A649C868-E651-49D2-A419-3243707D133F}
+	EndGlobalSection
+EndGlobal
