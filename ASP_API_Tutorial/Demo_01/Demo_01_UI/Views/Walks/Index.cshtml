@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Demo_01_UI.Models.DTOs;
+@model IEnumerable<WalkDTO>;
+
+    <h1 class="mt-5">Walks List</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Length</td>
+        </tr>
+    </thead>
+    @if(Model is not null)
+    {
+        foreach(var walk in Model)
+        {
+            <tr>
+                <td>@walk.Id</td>
+                <td>@walk.Name</td>
+                <td>@walk.Description</td>
+                <td>@walk.LengthInKm</td>
+            </tr>
+        }
+    }
+</table>

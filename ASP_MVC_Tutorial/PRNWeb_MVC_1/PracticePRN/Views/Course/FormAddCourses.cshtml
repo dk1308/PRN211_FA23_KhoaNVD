@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Course
+<!doctype html>
+<html>
+<head>
+    <title>Add Course</title>
+</head>
+<body>
+    @* <form asp-action="FormAddCourses" method="post">
+        <div>
+            <label asp-for="CourseId">ID</label>
+            <input asp-for="CourseId" />
+        </div>
+        <div>
+            <label asp-for="CourseName">Name</label>
+            <input asp-for="CourseName" />
+        </div>
+        <div>
+            <label asp-for="Credit">Credits</label>
+            <input asp-for="Credit" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form> *@
+
+    <form action="Course/FormAddCourses" method="post">
+        <div>
+            <label for="CourseId">ID</label>
+            <input name="CourseId" />
+        </div>
+        <div>
+            <label for="CourseName">Name</label>
+            <input name="CourseName" />
+        </div>
+        <div>
+            <label for="Credit">Credits</label>
+            <input name="Credit" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+</html>

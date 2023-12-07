@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var id = 10;
+    var name = "khoa";
+    int age = 20;
+}
+@{
+    var course = new
+    {
+        Id = 1,
+        Name = "C#"
+    };
+    /* StudentNo@id does not work */
+    <h3>StudentNo@(id)</h3>
+    <p>Name: @name</p>
+    <p>Age: @age</p>
+    <p>Be studying: @course.Name</p>
+}
+

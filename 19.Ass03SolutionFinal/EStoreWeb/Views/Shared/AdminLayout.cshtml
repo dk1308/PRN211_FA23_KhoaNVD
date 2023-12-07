@@ -1,0 +1,58 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FPT Shop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="~/favicon.ico" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="~/logo.jpg"
+             alt="FPT Shop" width="243" height="85">
+        <h1>FPT Shop</h1>
+        <h2>FPT Shop - Cơ sở Đà Nẵng</h2>
+    </header>
+
+    <aside id="sidebarA">
+        <nav>
+            <ul>
+                <li>
+                    <a asp-controller="Members" asp-action="Index">
+                        Member Manager
+                    </a>
+                </li>
+                <li>
+                    <a href="/Products/Index">
+                        Product Manage
+                    </a>
+                </li>
+                <li>
+                    <a href="/OrderDetails/Index">
+                        Order List
+                    </a>
+                </li>
+                <li>
+                    <a href="/Login/LogOut">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    @RenderBody()
+
+    <footer>
+        <p>
+            Assignment 3 - PRN
+            Nguyen Van Dang Khoa
+        </p>
+    </footer>
+</body>
+</html>
