@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Demo_01.Data_Access;
+using Demo_01.DataAccess;
 using Demo_01.Models.Domain;
 using Demo_01.Models.DTOs;
 using Demo_01.Repositories;

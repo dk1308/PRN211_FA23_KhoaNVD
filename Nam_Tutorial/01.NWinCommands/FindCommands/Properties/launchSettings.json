@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FindCommands": {
+      "commandName": "Project",
+      "commandLineArgs": "trump"
+    }
+  }
+}

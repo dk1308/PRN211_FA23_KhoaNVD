@@ -5,8 +5,10 @@ step2:
 	dotnet add <project name> package Microsoft.EntityFrameworkCore.design
 	dotnet add <project name> package Microsoft.EntityFrameworkCore.SqlServer
 step3: 
-	dotnet ef dbcontext scaffold "Data Source=LAPTOP-8EJE3NEE;Database=Assignment3DB;User Id=sa;Password=123456;TrustServerCertificate=true;Trusted_Connection=SSPI;Encrypt=false;" Microsoft.EntityFrameworkCore.SqlServer --output-dir BusinessObject
+	dotnet ef dbcontext scaffold "Data Source=LAPTOP-8EJE3NEE;Database=PizzaStore;User Id=sa;Password=123456;TrustServerCertificate=true;Trusted_Connection=SSPI;Encrypt=false;" Microsoft.EntityFrameworkCore.SqlServer --output-dir DataAccess
 
+
+Scaffold-DbContext "Data Source=LAPTOP-8EJE3NEE;Database=PizzaStore;User Id=sa;Password=123456;TrustServerCertificate=true;Trusted_Connection=SSPI;Encrypt=false;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 
 -- Code first

@@ -1,4 +1,4 @@
-using Demo_01.Data_Access;
+using Demo_01.DataAccess;
 using Demo_01.Mappings;
 using Demo_01.Middlewares;
 using Demo_01.Repositories;
@@ -72,7 +72,8 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 
 // Set up jwt
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
