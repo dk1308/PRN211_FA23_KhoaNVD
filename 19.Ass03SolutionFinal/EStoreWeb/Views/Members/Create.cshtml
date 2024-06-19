@@ -1,0 +1,66 @@
+﻿@using Object;
+@model Member
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<body>
+    <section>
+        <h4>Member</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyName" class="control-label"></label>
+                        <input asp-for="CompanyName" class="form-control" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="City" class="control-label"></label>
+                        @* <input asp-for="City" class="form-control" /> *@
+                        <select asp-for="City" class="form-control">
+                            <option value="Da Nang">Da Nang</option>
+                            <option value="Ha Noi">Ha Noi</option>
+                            <option value="Ho Chi Minh">Ho Chi Minh</option>
+                            <option value="Hai Phong">Hai Phong</option>
+                            <option value="Can Tho">Can Tho</option>
+                            <option value="Quang Nam">Quang Nam</option>
+                            <option value="Quang Ninh">Quang Ninh</option>
+                            <option value="Ha Tinh">Ha Tinh</option>
+                            <option value="Bac Giang">Bac Giang</option>
+                            <option value="Bac Ninh">Bac Ninh</option>
+                            <option value="Kien Giang">Kien Giang</option>
+                            <option value="Vung Tau">Vung Tau</option>
+                        </select>
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Country" class="control-label"></label>
+                        <input asp-for="Country" value="Viet Nam" class="form-control" />
+                        <span asp-validation-for="Country" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </section>
+</body>

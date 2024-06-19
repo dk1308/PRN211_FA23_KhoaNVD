@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/app-walksmn-seasia-dev-001/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsWalkMnConnectionString_9255CDC0DC",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/sqlserver-walksmn-seasia-dev-001/databases/sqldb-walksmn-seasia-dev-001",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:WalkMnConnectionString",
+      "dynamicId": null
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/app-walksmn-seasia-dev-001/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsWalkMnAuthConnectionStr_3E8361D774",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/sqlserver-walksmn-seasia-dev-001/databases/sqldb-walksmn-seasia-dev-001",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:WalkMnAuthConnectionString",
+      "dynamicId": null
+    }
+  }
+}

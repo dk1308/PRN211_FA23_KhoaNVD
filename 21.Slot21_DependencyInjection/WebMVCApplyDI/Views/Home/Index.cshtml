@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Product
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <h1>Product Information</h1>
+    @if(Model == null)
+    {
+        <p class=" alert alert-danger ">Not found product</p>
+    }
+    else
+    {
+        <p>Product Name: <strong>@Model.Name</strong></p>
+        <p>Product Price: @Model.Price</p>
+    }
+</div>

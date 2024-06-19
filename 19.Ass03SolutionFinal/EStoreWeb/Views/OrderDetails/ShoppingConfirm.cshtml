@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Object;
+@model Orderr
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+    IEnumerable<Product> products = (IEnumerable<Product>)ViewBag.Products;
+}
+<body>
+    <section>
+        <form asp-action="ShoppingConfirm" method="post">
+            <div class="row">
+                <label asp-for="MemberId">Member ID</label>
+                <input asp-for="MemberId" value="@ViewData["MemberId"]"/>
+            </div>
+            <div class="row">
+                <label asp-for="Member.City">Member Address</label>
+                <input asp-for="Member.City" value="@ViewData["MemberCity"]" disabled/>
+            </div>
+            <div class="row">
+                <label asp-for="Freight">Freight</label>
+                <input asp-for="Freight" value="@ViewData["Freight"]" disabled/>
+            </div>
+            <div class="row">
+                <label>Total Money</label>
+                <input value="@ViewData["TotalMoney"]" name="totalMoney"/>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            CategoryId
+                        </th>
+                        <th>
+                            ProductName
+                        </th>
+                        <th>
+                            Weight
+                        </th>
+                        <th>
+                            UnitPrice
+                        </th>
+                        <th>
+                            UnitsInStock
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.Products)
+                    {
+                        <tr>
+                            <td>
+                                @item.CategoryId
+                            </td>
+                            <td>
+                                @item.ProductName
+                            </td>
+                            <td>
+                                @item.Weight
+                            </td>
+                            <td>
+                                @item.UnitPrice
+                            </td>
+                            <td>
+                                @item.UnitsInStock
+                            </td>
+                            <td>
+                                <input style="width:4.5em" value="@ViewData["Quantity"+@item.ProductId]" name="ProductQuantity"/>
+                            </td>
+                        </tr>
+                        <input style="display: none" value="@item.ProductId" name="ProductId" />
+                    }
+                </tbody>
+            </table>
+            <div class="row">
+                <label asp-for="RequiredDate">Required Date</label>
+                <input type="date" asp-for="RequiredDate" required="true"/>
+            </div>
+            <div class="row">
+                <label asp-for="ShippedDate">Shipped Date</label>
+                <input type="date" asp-for="ShippedDate" required="true"/>
+            </div>
+            <input type="submit" value="Buy"/>
+        </form>
+    </section>
+</body>

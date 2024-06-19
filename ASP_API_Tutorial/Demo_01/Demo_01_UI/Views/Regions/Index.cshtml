@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Demo_01_UI.Models.DTOs;
+@model IEnumerable<RegionDTO>
+
+<div class="d-flex justify-content-end">
+    <a class="btn btn-secondary" asp-controller="Regions" asp-action="Add">Add New</a>
+</div>
+<h1 class="mt-5">Regions List</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Code</td>
+            <td> </td>
+        </tr>
+    </thead>
+    @if (Model is not null)
+    {
+        foreach (RegionDTO region in Model)
+        {
+            <tr>
+                <td>@region.Id</td>
+                <td>@region.Name</td>
+                <td>@region.Code</td>
+                <td>
+                    <a asp-controller="Regions" asp-action="Update" asp-route-id="@region.Id" class="btn btn-light">Update</a>
+                </td>
+            </tr>
+        }
+    }
+</table>
